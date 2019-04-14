@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from './icon/icon';
 
 const fn: React.MouseEventHandler = (e) => {
-  console.log(e.target);
+  console.log(e);
 };
 
 ReactDOM.render(<div>
