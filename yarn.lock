@@ -3546,6 +3546,14 @@ fstream@^1.0.0, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+fui9897@^0.0.3:
+  version "0.0.3"
+  resolved "http://registry.npm.taobao.org/fui9897/download/fui9897-0.0.3.tgz#723c6ffe3d9dce45fbf3a14337aace4131f2f3ab"
+  integrity sha1-cjxv/j2dzkX786FDN6rOQTHy86s=
+  dependencies:
+    react "^16.8.4"
+    react-dom "^16.8.4"
+
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
