@@ -1,10 +1,20 @@
 // https://jestjs.io/docs/en/configuration.html
-
+const base = require('./jest.config')
+module.exports = Object.assign({}, base, {
+  reporters: ['jest-junit'],
+  collectCoverage: true,
+  collectCoverageFrom: ["{lib,include}/**/*.{js,jsx,ts,tsx}", "!**/node_modules/**"],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov'],
+})
 module.exports = {
   verbose: true,
   clearMocks: false,
-  collectCoverage: false,
-  reporters: ["default"],
+  collectCoverage: true,
+  collectCoverageFrom: ["{lib,include}/**/*.{js,jsx,ts,tsx}", "!**/node_modules/**"],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov'],
+  reporters: ["default", 'jest-junit'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],
   globals: {
