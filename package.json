@@ -53,8 +53,12 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@types/react-router": "^4.4.5",
+    "@types/react-router-dom": "^4.3.2",
     "fui9897": "^0.0.3",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
   }
 }
