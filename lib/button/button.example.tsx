@@ -1,9 +1,14 @@
 import React from 'react';
+import Button from './button'
+import './button.example.scss'
 
-const ButtonExample: React.FunctionComponent = () => {
+export default function() {
   return (
-    <div>hihihi</div>
-  );
+    <div>
+      <Button type="primary">Primary</Button>
+      <Button>Default</Button>
+      <Button type="dashed">Dashed</Button>
+      <Button type="danger">Danger</Button>
+    </div>
+  )
 };
-
-export default ButtonExample;
