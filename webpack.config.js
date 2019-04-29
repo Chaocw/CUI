@@ -24,8 +24,46 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              localIdentName: '[path][name]---[local]---[hash:base64:5]',
+              getLocalIdent: (context, localIdentName, localName) => {
+                if (
+                    context.resourcePath.includes('node_modules') ||
+                    context.resourcePath.includes('global.scss')
+                ) {
+                  return localName;
+                }
+                const match = context.resourcePath.match(/src(.*)/);
+                if (match && match[1]) {
+                  const antdProPath = match[1].replace('.scss', '');
+                  const arr = slash(antdProPath)
+                      .split('/')
+                      .map(a => a.replace(/([A-Z])/g, '-$1'))
+                      .map(a => a.toLowerCase());
+                  return `cui${arr.join('-')}-${localName}`.replace(/--/g, '-');
+                }
+                return localName;
+              },
+            }
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      }
     ]
   },
 };

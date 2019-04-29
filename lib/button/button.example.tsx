@@ -9,6 +9,7 @@ export default function() {
       <Button>Default</Button>
       <Button type="dashed">Dashed</Button>
       <Button type="danger">Danger</Button>
+      <Button icon="facebook">facebook</Button>
     </div>
   )
 };
