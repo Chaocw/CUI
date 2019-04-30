@@ -3,6 +3,7 @@
   background: #4285f4;
   margin: 4px 0;
   color: white;
+  border: 1px solid;
 }
 .y {
   background: lighten(#4285f4, 5%);
@@ -17,4 +18,7 @@
 }
 .z + .y, .y + .z, .z + .gu-layout {
   margin-left: 8px;
+}
+.hi {
+
 }

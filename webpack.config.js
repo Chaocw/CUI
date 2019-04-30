@@ -1,4 +1,5 @@
 const path = require('path');
+const slash = require('slash2');
 
 module.exports = {
   entry: {
@@ -29,10 +30,12 @@ module.exports = {
             loader: "style-loader"
           },
           {
-            loader: "css-loader",
+            loader: 'typings-for-css-modules-loader',
             options: {
               modules: true,
-              localIdentName: '[path][name]---[local]---[hash:base64:5]',
+              namedExport: true,
+              camelCase: true,
+              minimize: true,
               getLocalIdent: (context, localIdentName, localName) => {
                 if (
                     context.resourcePath.includes('node_modules') ||
@@ -40,21 +43,29 @@ module.exports = {
                 ) {
                   return localName;
                 }
-                const match = context.resourcePath.match(/src(.*)/);
+                const match = context.resourcePath.match(/(.*)/);
                 if (match && match[1]) {
                   const antdProPath = match[1].replace('.scss', '');
-                  const arr = slash(antdProPath)
-                      .split('/')
-                      .map(a => a.replace(/([A-Z])/g, '-$1'))
-                      .map(a => a.toLowerCase());
-                  return `cui${arr.join('-')}-${localName}`.replace(/--/g, '-');
+                  if (/.example/.test(antdProPath)) {
+                    const arr = slash(antdProPath)
+                        .replace('.example', '')
+                        .split('/')
+                        .map(a => a.replace(/([A-Z])/g, '-$1'))
+                        .map(a => a.toLowerCase())
+                        .slice(-2);
+                    return `cui-${arr.join('-')}-${localName}`.replace(/--/g, '-');
+                  }
                 }
                 return localName;
               },
             }
           },
           {
-            loader: "sass-loader"
+            loader: "sass-loader",
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: true
+            }
           }
         ]
       },

@@ -9,22 +9,23 @@ import Layout from "./lib/layout/layout"
 import Header from "./lib/layout/header"
 import Sider from "./lib/layout/sider"
 import Content from "./lib/layout/Content"
-import './example.scss'
+// @ts-ignore
+import style from './example.scss'
 import Footer from "./lib/layout/footer"
 
 const logo = require('./logo.png');
 
 ReactDOM.render(
     <Router>
-      <Layout className="site-page">
-        <Header className="site-header">
-          <div className="logo">
+      <Layout className={style.sitePage}>
+        <Header className={style.siteHeader}>
+          <div className={style.logo}>
             <img src={logo} width="48" height="48" alt=""/>
             <span> CUI </span>
           </div>
         </Header>
         <Layout>
-          <Sider className="site-aside">
+          <Sider className={style.siteAside}>
             <h2>组件</h2>
             <ul>
               <li>
@@ -41,14 +42,14 @@ ReactDOM.render(
               </li>
             </ul>
           </Sider>
-          <Content className="site-main">
+          <Content className={style.siteMain}>
             <Route path='/icon' component={IconDemo} />
             <Route path='/button' component={ButtonExample} />
             <Route path='/dialog' component={DialogExample} />
             <Route path='/layout' component={LayoutExample} />
           </Content>
         </Layout>
-        <Footer className="site-footer">
+        <Footer className={style.siteFooter}>
           &copy; CC 超
         </Footer>
       </Layout>

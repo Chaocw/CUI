@@ -7,24 +7,27 @@ a { text-decoration: none; color: inherit; }
 pre {
   font-family: "Fira Code Medium", Consolas, monospace;
 }
+button {
+  margin: 4px 5px 4px 0;
+}
 $padding: 16px;
 $main-color: #00ADB5;
 $border-color: #eee;
 body {
   font-size: 16px;
 }
-.site-page {
+.sitePage {
   background: #ffffff;
   min-height: 100vh;
 }
-.site-main {
+.siteMain {
   padding-top: 16px;
   padding-bottom: 16px;
   color: #333;
   font-size: 14px;
   line-height: 1.5;
 }
-.site-header {
+.siteHeader {
   background: $border-color;
   padding: 8px 0;
   .logo {
@@ -38,7 +41,7 @@ body {
     }
   }
 }
-.site-aside {
+.siteAside {
   border-right: 1px solid #EEEEEE;
   margin-right: 16px;
   h2 {
@@ -63,7 +66,7 @@ body {
     }
   }
 }
-.site-footer {
+.siteFooter {
   text-align: center;
   font-size: 12px;
   color: #666;

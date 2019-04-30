@@ -3,7 +3,7 @@ import Layout from './layout'
 import Footer from "./footer"
 import Content from './Content'
 import Header from './header'
-import './layout.example.scss'
+import styles from './layout.example.scss'
 import Sider from "./sider"
 
 export default function() {
@@ -11,43 +11,43 @@ export default function() {
     <div>
       <div>
         <h1>ex 1</h1>
-        <Layout style={{height: 300, width: 500}} className={'hi'}>
-          <Header className={'x'}>header</Header>
-          <Content className={'y'}>content</Content>
-          <Footer className={'x'}><button>footer</button></Footer>
+        <Layout style={{height: 300, width: 500}}>
+          <Header className={styles.x}>header</Header>
+          <Content className={styles.y}>content</Content>
+          <Footer className={styles.x}><button>footer</button></Footer>
         </Layout>
       </div>
       <div>
         <h1>ex 2</h1>
-        <Layout style={{height: 300, width: 500}} className={'hi'}>
-          <Header className={'x'}>header</Header>
+        <Layout style={{height: 300, width: 500}}>
+          <Header className={styles.x}>header</Header>
           <Layout>
-            <Sider className={'z'}>sider</Sider>
-            <Content className={'y'}>content</Content>
+            <Sider className={styles.z}>sider</Sider>
+            <Content className={styles.y}>content</Content>
           </Layout>
-          <Footer className={'x'}>footer</Footer>
+          <Footer className={styles.x}>footer</Footer>
         </Layout>
       </div>
       <div>
         <h1>ex 3</h1>
-        <Layout style={{height: 300, width: 500}} className={'hi'}>
-          <Header className={'x'}>header</Header>
+        <Layout style={{height: 300, width: 500}}>
+          <Header className={styles.x}>header</Header>
           <Layout>
-            <Sider className={'z'}>sider</Sider>
-            <Content className={'y'}>content</Content>
-            <Sider className={'z'}>sider</Sider>
+            <Sider className={styles.z}>sider</Sider>
+            <Content className={styles.y}>content</Content>
+            <Sider className={styles.z}>sider</Sider>
           </Layout>
-          <Footer className={'x'}>footer</Footer>
+          <Footer className={styles.x}>footer</Footer>
         </Layout>
       </div>
       <div>
         <h1>ex 4</h1>
-        <Layout style={{height: 300, width: 500 }} className={'hi'}>
-          <Sider className={'z'}>sider</Sider>
+        <Layout style={{height: 300, width: 500 }}>
+          <Sider className={styles.z}>sider</Sider>
           <Layout>
-            <Header className={'x'}>header</Header>
-            <Content className={'y'}>content</Content>
-            <Footer className={'x'}>footer</Footer>
+            <Header className={styles.x}>header</Header>
+            <Content className={styles.y}>content</Content>
+            <Footer className={styles.x}>footer</Footer>
           </Layout>
         </Layout>
       </div>

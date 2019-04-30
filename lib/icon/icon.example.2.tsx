@@ -9,7 +9,7 @@ const IconExample2: React.FunctionComponent = () => {
   );
   return (
     <div>
-      <Icon component={HeartSvg}/>
+      <Icon component={HeartSvg} style={{color: 'red'}}/>
     </div>
   );
 };
