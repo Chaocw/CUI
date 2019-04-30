@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom'
-import IconDemo from './lib/icon/icon.demo';
-import ButtonExample from './lib/button/button.example';
-import DialogExample from './lib/dialog/dialog.example';
-import LayoutExample from './lib/layout/layout.example';
+import IconDemo from './lib/icon/demo/icon.demo';
+import ButtonDemo from './lib/button/demo/button.demo';
+import DialogDemo from './lib/dialog/demo/dialog.demo';
+import LayoutDemo from './lib/layout/demo/layout.demo';
 import Layout from "./lib/layout/layout"
 import Header from "./lib/layout/header"
 import Sider from "./lib/layout/sider"
@@ -44,9 +44,9 @@ ReactDOM.render(
           </Sider>
           <Content className={style.siteMain}>
             <Route path='/icon' component={IconDemo} />
-            <Route path='/button' component={ButtonExample} />
-            <Route path='/dialog' component={DialogExample} />
-            <Route path='/layout' component={LayoutExample} />
+            <Route path='/button' component={ButtonDemo} />
+            <Route path='/dialog' component={DialogDemo} />
+            <Route path='/layout' component={LayoutDemo} />
           </Content>
         </Layout>
         <Footer className={style.siteFooter}>

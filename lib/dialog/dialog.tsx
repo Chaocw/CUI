@@ -1,9 +1,11 @@
 import * as React from "react"
-import {Fragment, ReactElement, ReactNode, useEffect} from "react"
-import {scopedClassMaker} from '../helpers/classes'
+// @ts-ignore
+import Animate from 'rc-animate'
+import {ReactElement, ReactNode, useEffect} from "react"
+import classes, {scopedClassMaker} from '../helpers/classes'
 import Icon from "../icon/icon"
 import ReactDOM from 'react-dom'
-import './dialog.scss';
+import './dialog.scss'
 
 interface Props {
   visible: boolean,
@@ -38,29 +40,33 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
       window.removeEventListener('keydown', keydownCallback)
     }
   })
-  const x = props.visible ?
-    <Fragment>
-      <div className={sc('mask')} onClick={onClickMask}>
-      </div>
-      <div className={sc('')}>
-        <div className={sc('close')} onClick={onClickClose}>
-          <Icon name="close"/>
+  const x = (
+    <Animate transitionName="fade" transitionAppear>
+      {props.visible ?
+        <div className={classes(sc('wrap'), 'code-box-shape')}>
+          <div className={sc('mask')} onClick={onClickMask}>
+          </div>
+          <div className={sc('')}>
+            <div className={sc('close')} onClick={onClickClose}>
+              <Icon name="close"/>
+            </div>
+            <header className={sc('header')}>
+              提示
+            </header>
+            <main className={sc('main')}>
+              {props.children}
+            </main>
+            {props.buttons && <footer className={sc('footer')}>
+              {props.buttons && props.buttons.map((button, index) =>
+                React.cloneElement(button, {key: index})
+              )}
+            </footer>}
+          </div>
         </div>
-        <header className={sc('header')}>
-          提示
-        </header>
-        <main className={sc('main')}>
-          {props.children}
-        </main>
-        {props.buttons && <footer className={sc('footer')}>
-          {props.buttons && props.buttons.map((button, index) =>
-            React.cloneElement(button, {key: index})
-          )}
-        </footer>}
-      </div>
-    </Fragment>
-    :
-    null
+        :
+        null}
+    </Animate>
+  )
   return (
     ReactDOM.createPortal(x, document.body)
   )
@@ -85,9 +91,9 @@ const modal = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: (
       }}>
       {content}
     </Dialog>
-  const div = document.createElement('div');
-  document.body.append(div);
-  ReactDOM.render(component, div);
+  const div = document.createElement('div')
+  document.body.append(div)
+  ReactDOM.render(component, div)
   return onClose
 }
 

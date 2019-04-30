@@ -14,5 +14,11 @@ module.exports = Object.assign({}, base, {
             amd: 'react-dom',
             root: 'ReactDOM',
         },
+        'rc-animate': {
+            commonjs: 'rc-animate',
+            commonjs2: 'rc-animate',
+            amd: 'rc-animate',
+            root: 'Animate',
+        }
     }
 })

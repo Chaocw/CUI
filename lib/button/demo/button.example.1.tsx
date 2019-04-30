@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './button'
+import Button from '../button'
 import './button.example.scss'
 
-export default function() {
+const ButtonExample1: React.FunctionComponent = () => {
   return (
     <div>
       <Button type="primary">Primary</Button>
@@ -13,3 +13,5 @@ export default function() {
     </div>
   )
 };
+
+export default ButtonExample1

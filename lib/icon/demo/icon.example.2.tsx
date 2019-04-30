@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from "./icon"
+import Icon from "../icon"
 
 const IconExample2: React.FunctionComponent = () => {
   const HeartSvg = (
@@ -9,7 +9,7 @@ const IconExample2: React.FunctionComponent = () => {
   );
   return (
     <div>
-      <Icon component={HeartSvg} style={{color: 'red'}}/>
+      <Icon component={HeartSvg} style={{color: 'red'}} spin/>
     </div>
   );
 };

@@ -15,6 +15,7 @@ $main-color: #00ADB5;
 $border-color: #eee;
 body {
   font-size: 16px;
+  color: #222;
 }
 .sitePage {
   background: #ffffff;
@@ -75,5 +76,9 @@ body {
 }
 .example {
   padding: 16px 0;
-  display: flex;
+  :global {
+    .fui-icon {
+      margin-right: 6px;
+    }
+  }
 }
