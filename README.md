@@ -15,10 +15,10 @@ a react ui framework
 # 安装
 
 ```shell
-npm install fiana-ui
+npm install cc-ui
 ```
 ```shell
-yarn add fiona-ui
+yarn add cc-ui
 ```
 
 # PR [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Chaocw/CUI/issues)

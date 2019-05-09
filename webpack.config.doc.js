@@ -11,7 +11,7 @@ module.exports = Object.assign({}, base, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './example/example.html',
+            template: './example.html',
             filename: 'index.html',
             title: 'cc-ui'
         })
