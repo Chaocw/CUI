@@ -1,9 +1,24 @@
-* {margin: 0;padding: 0; box-sizing: border-box;}
-*::before {box-sizing: border-box;}
-*::after {box-sizing: border-box;}
-ul, ol {list-style: none;}
-h1, h2, h3, h4, h5, h6 {font-weight: normal;}
-a { text-decoration: none; color: inherit; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+ul, ol {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 pre {
   font-family: "Fira Code Medium", Consolas, monospace;
 }
@@ -12,9 +27,10 @@ button {
 }
 $padding: 16px;
 $main-color: #00ADB5;
-$border-color: #eee;
+$ligten-color: #e6fffb;
+$border-color: #ddd;
 body {
-  font-size: 16px;
+  font-size: 14px;
   color: #222;
 }
 .sitePage {
@@ -22,20 +38,24 @@ body {
   min-height: 100vh;
 }
 .siteMain {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: $padding;
+  padding-bottom: $padding;
+  padding-left: $padding;
   color: #333;
   font-size: 14px;
   line-height: 1.5;
 }
 .siteHeader {
-  background: $border-color;
+  background: #fff;
+  box-shadow: 0 2px 8px #f0f1f2;
   padding: 8px 0;
   .logo {
     padding: 0 $padding;
     display: flex;
     align-items: center;
-    > img {margin-right: 8px;}
+    > img {
+      margin-right: 8px;
+    }
     > span {
       color: $main-color;
       font-size: 32px;
@@ -43,25 +63,33 @@ body {
   }
 }
 .siteAside {
-  border-right: 1px solid #EEEEEE;
-  margin-right: 16px;
-  h2 {
-    padding: $padding;
-    font-size: 18px;
+  margin-right: $padding;
+  min-width: 260px;
+  border-right: 1px solid $border-color;
+  h3 {
+    padding: 20px 50px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-transition: all .3s;
+    transition: all .3s;
   }
   ul {
     min-width: 12em;
     > li {
-      a {
-        color: #333;
-        display: block;
-        padding: 8px $padding;
-        &:hover {
-          color: $main-color;
-        }
-        &.active {
-          color: white;
-          background: $main-color;
+      display: block;
+      :global {
+        a {
+          color: #333;
+          display: block;
+          padding: 8px $padding 8px 80px;
+          &:hover {
+            color: $main-color;
+          }
+          &.active {
+            color: $main-color;
+            background: #e6fffb;
+          }
         }
       }
     }
@@ -78,7 +106,8 @@ body {
   padding: 16px 0;
   :global {
     .fui-icon {
-      margin-right: 6px;
+      margin-right: 20px;
+      font-size: 16px;
     }
   }
 }

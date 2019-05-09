@@ -36,7 +36,7 @@ module.exports = {
               namedExport: true,
               camelCase: true,
               minimize: true,
-              getLocalIdent: (context, localIdentName, localName) => {
+              "getLocalIdent": (context, localIdentName, localName) => {
                 if (
                     context.resourcePath.includes('node_modules') ||
                     context.resourcePath.includes('global.scss')
@@ -48,7 +48,7 @@ module.exports = {
                   const antdProPath = match[1].replace('.scss', '');
                   if (/.example/.test(antdProPath)) {
                     const arr = slash(antdProPath)
-                        .replace('.example', '')
+                        // .replace('.example', '')
                         .split('/')
                         .map(a => a.replace(/([A-Z])/g, '-$1'))
                         .map(a => a.toLowerCase())

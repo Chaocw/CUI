@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from '../icon';
 import {mount} from 'enzyme';
 
-describe('icon', () => {
+describe('icon.example.scss', () => {
     it('render successfully', () => {
         const json = renderer.create(<Icon name={'alipay'}/>).toJSON();
         expect(json).toMatchSnapshot();

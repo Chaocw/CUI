@@ -26,19 +26,19 @@ ReactDOM.render(
         </Header>
         <Layout>
           <Sider className={style.siteAside}>
-            <h2>组件</h2>
+            <h3>组件</h3>
             <ul>
               <li>
-                <NavLink to='/icon'>Icon</NavLink>
+                <NavLink to='/icon'>Icon 图标</NavLink>
               </li>
               <li>
-                <NavLink to='/button'>Button</NavLink>
+                <NavLink to='/button'>Button 按钮</NavLink>
               </li>
               <li>
-                <NavLink to='/dialog'>对话框</NavLink>
+                <NavLink to='/dialog'>Dialog 对话框</NavLink>
               </li>
               <li>
-                <NavLink to='/layout'>layout</NavLink>
+                <NavLink to='/layout'>layout 布局</NavLink>
               </li>
             </ul>
           </Sider>
