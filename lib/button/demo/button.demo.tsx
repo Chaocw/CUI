@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Demo from '../../../demo';
+import Demo from '../../../example/components/demo';
 import ButtonExample1 from "./button.example.1"
 
 const ButonDemo = () => {

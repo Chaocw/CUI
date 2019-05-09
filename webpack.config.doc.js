@@ -7,12 +7,13 @@ module.exports = Object.assign({}, base, {
         path: path.resolve(__dirname, 'doc'),
     },
     entry: {
-        example: './example.tsx',
+        example: './example/example.tsx',
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'example.html',
-            filename: 'index.html'
+            template: './example/example.html',
+            filename: 'index.html',
+            title: 'cc-ui'
         })
     ],
 })

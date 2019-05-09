@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Demo from '../../../demo';
+import Demo from '../../../example/components/demo';
 import DialogExample2 from './dialog.example.2';
 import DialogExample3 from './dialog.example.3';
 

@@ -1,8 +1,8 @@
 import {useState} from "react"
 import React from 'react'
 import Highlight, {defaultProps} from "prism-react-renderer"
-import Button from "./lib/button/button"
-import * as styles from './example.scss'
+import Button from "../../lib/button/button"
+import * as styles from '../example.scss'
 
 interface Props {
   code: string

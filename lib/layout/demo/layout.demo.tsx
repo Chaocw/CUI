@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Demo from '../../../demo';
+import Demo from '../../../example/components/demo';
 import LayoutExample1 from './layout.example.1';
 import LayoutExample2 from './layout.example.2';
 import LayoutExample3 from './layout.example.3';
