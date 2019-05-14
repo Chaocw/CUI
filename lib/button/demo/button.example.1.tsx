@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../button'
 import './button.example.scss'
 
-export default function () {
+const ButtonExample1: React.FunctionComponent = () => {
 	return (
 		<div>
 			<Button type="primary">Primary</Button>
@@ -12,5 +12,7 @@ export default function () {
 			<Button icon="facebook">facebook</Button>
 		</div>
 	)
-};
+}
+
+export default ButtonExample1
 
