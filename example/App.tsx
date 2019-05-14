@@ -27,6 +27,9 @@ const App: React.FunctionComponent<Props> = ({children}) => (
         <h3>组件</h3>
         <ul>
           <li>
+            <NavLink to='/layout'>layout 布局</NavLink>
+          </li>
+          <li>
             <NavLink to='/icon'>Icon 图标</NavLink>
           </li>
           <li>
@@ -34,9 +37,6 @@ const App: React.FunctionComponent<Props> = ({children}) => (
           </li>
           <li>
             <NavLink to='/dialog'>Dialog 对话框</NavLink>
-          </li>
-          <li>
-            <NavLink to='/layout'>layout 布局</NavLink>
           </li>
         </ul>
       </Sider>
