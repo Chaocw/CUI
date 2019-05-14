@@ -10,7 +10,7 @@ const IconExample1: React.FunctionComponent = () => {
   );
   return (
     <>
-      <Icon name='alipay' style={{color: 'red'}} className={styles.icon}/>
+      <Icon name='alipay' className={styles.icon}/>
       <Icon name='wechat' />
       <Icon name='qq' />
       <Icon name='facebook' />
