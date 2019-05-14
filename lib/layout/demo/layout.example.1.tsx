@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Layout, Header, Content, Footer, Sider } from '../layout';
 import styles from './layout.example.scss';
 
-export default () => {
+const LayoutExample1: React.FunctionComponent =  () => {
   return (
-    <Fragment>
+    <>
       <div className={styles.demo1}>
         <h1>第一个例子</h1>
         <Layout style={{height: '500px'}} className={styles.lLayout}>
@@ -46,6 +46,8 @@ export default () => {
           </Layout>
         </Layout>
       </div>
-    </Fragment>
+    </>
   )
 }
+
+export default LayoutExample1
