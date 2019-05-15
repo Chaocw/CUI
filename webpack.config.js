@@ -1,5 +1,8 @@
 const path = require('path');
 const slash = require('slash2');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+const _mode = process.env.NODE_ENV
 
 module.exports = {
   entry: {
@@ -17,7 +20,8 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader'
+        loader: 'awesome-typescript-loader',
+        exclude: /node_modules/ // 不进行编译的目录
       },
       {
         test: /\.svg$/,
@@ -27,7 +31,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-            loader: "style-loader"
+            loader: _mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader
           },
           {
             loader: 'typings-for-css-modules-loader',

@@ -5,6 +5,7 @@ import ButtonDemo from '../lib/button/demo/button.demo'
 import DialogDemo from '../lib/dialog/demo/dialog.demo'
 import LayoutDemo from '../lib/layout/demo/layout.demo'
 import App from "./App"
+import { hot } from 'react-hot-loader/root';
 
 const Router: React.FunctionComponent = () => (
   <HashRouter>
@@ -20,4 +21,4 @@ const Router: React.FunctionComponent = () => (
   </HashRouter>
 )
 
-export default Router
+export default hot(Router)
