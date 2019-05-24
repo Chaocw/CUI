@@ -3,7 +3,6 @@ import Layout from "../lib/layout/layout"
 import Header from "../lib/layout/header"
 import Sider from "../lib/layout/sider"
 import Content from "../lib/layout/Content"
-// @ts-ignore
 import style from './styles/example.scss'
 import Footer from "../lib/layout/footer"
 import {NavLink} from "react-router-dom"
@@ -45,7 +44,7 @@ const App: React.FunctionComponent<Props> = ({children}) => (
       </Content>
     </Layout>
     <Footer className={style.siteFooter}>
-      &copy; CC 超
+      &copy; CC
     </Footer>
   </Layout>
 )

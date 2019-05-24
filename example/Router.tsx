@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 import React from 'react'
 import {HashRouter, Route, Switch, Redirect} from 'react-router-dom'
 import IconDemo from '../lib/icon/demo/icon.demo'
@@ -5,7 +6,6 @@ import ButtonDemo from '../lib/button/demo/button.demo'
 import DialogDemo from '../lib/dialog/demo/dialog.demo'
 import LayoutDemo from '../lib/layout/demo/layout.demo'
 import App from "./App"
-import { hot } from 'react-hot-loader/root';
 
 const Router: React.FunctionComponent = () => (
   <HashRouter>

@@ -1,7 +1,6 @@
 const path = require('path');
 const slash = require('slash2');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const _mode = process.env.NODE_ENV
 
 module.exports = {
@@ -13,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'FUI',
+    library: 'cc-ui',
     libraryTarget: 'umd',
   },
   module: {
