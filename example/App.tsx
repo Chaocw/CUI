@@ -29,7 +29,7 @@ const App: React.FunctionComponent<Props> = ({children}) => (
             <NavLink to='/layout'>layout 布局</NavLink>
           </li>
           <li>
-            <NavLink to='/icon'>Icon 图标12</NavLink>
+            <NavLink to='/icon'>Icon 图标1234</NavLink>
           </li>
           <li>
             <NavLink to='/button'>Button 按钮</NavLink>
