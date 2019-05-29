@@ -37,6 +37,9 @@ const App: React.FunctionComponent<Props> = ({children}) => (
           <li>
             <NavLink to='/dialog'>Dialog 对话框</NavLink>
           </li>
+          <li>
+            <NavLink to='/form'>form 表单</NavLink>
+          </li>
         </ul>
       </Sider>
       <Content className={style.siteMain}>

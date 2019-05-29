@@ -5,13 +5,13 @@ import Icon from '../icon/icon'
 
 const sc = scopedClassMaker('gu-button')
 
-interface Props extends React.HTMLAttributes<HTMLElement> {
-  type?: string,
-  icon?: string
+interface Props extends React.ButtonHTMLAttributes<HTMLElement> {
+  icon?: string,
+  htmlType?: string,
 }
 
 const Button: React.FunctionComponent<Props> = (props) => {
-  const {className, type, icon, ...rest} = props
+  const {className, type, icon, htmlType, ...rest} = props
   const classname = sc({'': true, [type || '']: true}, {extra: className})
   return (
     <button className={classname} {...rest} style={{display: icon && 'flex'}}>
