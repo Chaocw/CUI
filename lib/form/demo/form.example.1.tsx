@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './form.example.scss';
 import Form, { ValidateFields as validate, FormValue, FormField } from '../form'
-import Button from 'lib/button/button'
+import Button from '../../button/button'
 
 export default () => {
   const [formData, setFormData] = useState<FormValue>({

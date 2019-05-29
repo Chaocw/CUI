@@ -1,6 +1,6 @@
-const path = require('path');
-const slash = require('slash2');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path')
+const slash = require('slash2')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const _mode = process.env.NODE_ENV
 
 module.exports = {
@@ -9,6 +9,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    alias: {
+      lib: path.resolve(__dirname, 'lib/'),
+    }
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
@@ -41,25 +44,25 @@ module.exports = {
               minimize: true,
               "getLocalIdent": (context, localIdentName, localName) => {
                 if (
-                    context.resourcePath.includes('node_modules') ||
-                    context.resourcePath.includes('global.scss')
+                  context.resourcePath.includes('node_modules') ||
+                  context.resourcePath.includes('global.scss')
                 ) {
-                  return localName;
+                  return localName
                 }
-                const match = context.resourcePath.match(/(.*)/);
+                const match = context.resourcePath.match(/(.*)/)
                 if (match && match[1]) {
-                  const antdProPath = match[1].replace('.scss', '');
+                  const antdProPath = match[1].replace('.scss', '')
                   if (/.example/.test(antdProPath)) {
                     const arr = slash(antdProPath)
-                        // .replace('.example', '')
-                        .split('/')
-                        .map(a => a.replace(/([A-Z])/g, '-$1'))
-                        .map(a => a.toLowerCase())
-                        .slice(-2);
-                    return `cui-${arr.join('-')}-${localName}`.replace(/--/g, '-');
+                    // .replace('.example', '')
+                      .split('/')
+                      .map(a => a.replace(/([A-Z])/g, '-$1'))
+                      .map(a => a.toLowerCase())
+                      .slice(-2)
+                    return `cui-${arr.join('-')}-${localName}`.replace(/--/g, '-')
                   }
                 }
-                return localName;
+                return localName
               },
             }
           },
@@ -80,4 +83,4 @@ module.exports = {
       }
     ]
   },
-};
+}

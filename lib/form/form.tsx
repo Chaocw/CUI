@@ -1,7 +1,7 @@
 import React, { ReactNode, FormEvent } from 'react'
 import './form.scss'
 import { scopedClassMaker } from '../helpers/classes'
-import Input from 'lib/input/input'
+import Input from '../input/input'
 
 const componentName = 'Form'
 const sc = scopedClassMaker(componentName)
