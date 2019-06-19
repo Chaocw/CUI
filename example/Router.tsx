@@ -7,6 +7,7 @@ import DialogDemo from '../lib/dialog/demo/dialog.demo'
 import LayoutDemo from '../lib/layout/demo/layout.demo'
 import FormDemo from '../lib/form/demo/form.example.1'
 import App from "./App"
+import InputDemo from "../lib/input/demo/input.demo"
 
 const Router: React.FunctionComponent = () => (
   <HashRouter>
@@ -17,6 +18,7 @@ const Router: React.FunctionComponent = () => (
         <Route path='/dialog' component={DialogDemo}/>
         <Route path='/layout' component={LayoutDemo}/>
         <Route path='/form' component={FormDemo}/>
+        <Route path='/input' component={InputDemo}/>
         <Redirect to='/layout'/>
       </Switch>
     </App>

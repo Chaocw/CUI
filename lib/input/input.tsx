@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './input.scss';
-import { scopedClassMaker } from '../helpers/classes'
+import classes, { scopedClassMaker } from '../helpers/classes'
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 const tuple = <T extends string[]>(...args: T) => args;
@@ -28,7 +28,7 @@ const Input: React.FunctionComponent<IProps> =
     }
     return (
       <input
-        className={sc('footer', {extra: className})}
+        className={classes(sc(''), size && sc(size || '', {extra: className}))}
         value={onChange ? isEmpty(value) : inputVal}
         autoComplete={autoComplete}
         onChange={(e) => {

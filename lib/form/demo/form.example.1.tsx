@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
-import './form.example.scss';
+import React, { Dispatch, SetStateAction, useState } from 'react'
+import styles from './form.example.scss';
 import Form, { ValidateFields as validate, FormValue, FormField } from '../form'
 import Button from '../../button/button'
 
 export default () => {
-  const [formData, setFormData] = useState<FormValue>({
+  const [formData1, setFormData1] = useState<FormValue>({
+    username: '',
+    password: ''
+  });
+  const [formData2, setFormData2] = useState<FormValue>({
     username: '',
     password: ''
   });
@@ -19,55 +23,47 @@ export default () => {
     { name: 'password', minLen: 1, maxLen: 4, message: '未在1-4之间' },
     { name: 'password', pattern: /\d+/, message: '不符合正则条件' },
   ];
-  const onSubmit = () => {
+  const onSubmit = (formData: FormValue) => {
     const errors = validate(formData, rules);
     setErrors(errors);
   };
 
-  const onReset = () => {
-    const resetFormData: FormValue = {};
-    const errors = {};
-    Object.keys(formData).forEach((k: string) => resetFormData[k] = '');
-    setErrors(errors);
-    setFormData(resetFormData);
-  };
-
-  const onChange = (value: FormValue) => {
+  const onChange = (setFormData: Dispatch<SetStateAction<FormValue>>, value: FormValue) => {
     setFormData(value);
     const errors = validate(value, rules);
     setErrors(errors);
   };
 
   return <div>
-    <div className="f-form-demo">
-      <h1 style={{marginBottom: 10}}>第一个例子</h1>
+    <div className={styles.fFormDemo}>
+      <h3 style={{marginBottom: 10}}>水平排列</h3>
       <Form
-        onChange={onChange}
+        onChange={onChange.bind(null, setFormData1)}
         fields={fields}
-        value={formData}
+        value={formData1}
         errors={errors}
-        onSubmit={onSubmit}
+        onSubmit={onSubmit.bind(null, formData1)}
         buttons={
           <>
-          <Button type="primary" htmlType="submit">提交</Button>,
-          <Button onClick={onReset}>重置</Button>
+          <Button type="primary" htmlType="submit">提交</Button>
+          <Button>取消</Button>
           </>
         }
       />
     </div>
-    <div className="f-form-demo">
-      <h1 style={{marginBottom: 10}}>第二个例子</h1>
+    <div className={styles.fFormDemo}>
+      <h3 style={{marginBottom: 10}}>垂直排列</h3>
       <Form
-        onChange={onChange}
+        onChange={onChange.bind(null, setFormData2)}
         fields={fields}
-        value={formData}
+        value={formData2}
         errors={errors}
         layout='vertical'
-        onSubmit={onSubmit}
+        onSubmit={onSubmit.bind(null, formData2)}
         buttons={
           <>
-          <Button type="primary" htmlType="submit">提交</Button>,
-          <Button onClick={onReset}>重置</Button>
+          <Button type="primary" htmlType="submit">提交</Button>
+          <Button>取消</Button>
           </>
         }
       />

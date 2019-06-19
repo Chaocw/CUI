@@ -40,6 +40,9 @@ const App: React.FunctionComponent<Props> = ({children}) => (
           <li>
             <NavLink to='/form'>form 表单</NavLink>
           </li>
+          <li>
+            <NavLink to='/input'>input 输入框</NavLink>
+          </li>
         </ul>
       </Sider>
       <Content className={style.siteMain}>

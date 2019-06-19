@@ -3,7 +3,7 @@ import './form.scss'
 import { scopedClassMaker } from '../helpers/classes'
 import Input from '../input/input'
 
-const componentName = 'Form'
+const componentName = 'cu-form'
 const sc = scopedClassMaker(componentName)
 
 export interface FormValue {

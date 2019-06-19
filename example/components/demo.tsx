@@ -45,8 +45,15 @@ const Demo: React.FunctionComponent<Props> = (props) => {
         {props.children}
       </div>
       <Button onClick={() => setCodeVisible(!codeVisible)}>查看代码</Button>
-      <div style={{maxWidth: '800px', overflow: 'auto', marginTop: '16px'}}>
-        {codeVisible && code}
+      <div style={{
+        maxWidth: '800px',
+        overflow: 'auto',
+        marginTop: '16px',
+        transform: `scaleY(${codeVisible ? 1 : 0})`,
+        transition: 'transform 0.2s',
+        transformOrigin: 'left top'
+      }}>
+        {code}
       </div>
     </div>
   )
