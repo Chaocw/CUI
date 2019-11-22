@@ -9,3 +9,13 @@ exports[`icon render successfully 1`] = `
   />
 </svg>
 `;
+
+exports[`icon.example.scss render successfully 1`] = `
+<svg
+  className="fui-icon"
+>
+  <use
+    xlinkHref="#alipay"
+  />
+</svg>
+`;

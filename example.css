@@ -265,7 +265,7 @@ body {
 }
 
 
-.fui-dialog {
+.cui-dialog {
   position: relative;
   background: white;
   min-width: 20em;
@@ -276,7 +276,7 @@ body {
   top: 120px;
 }
 
-.fui-dialog-wrap {
+.cui-dialog-wrap {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -284,7 +284,7 @@ body {
   right: 0;
 }
 
-.fui-dialog-mask {
+.cui-dialog-mask {
   position: fixed;
   top: 0;
   left: 0;
@@ -294,25 +294,25 @@ body {
   z-index: 1;
 }
 
-.fui-dialog-header {
+.cui-dialog-header {
   font-size: 22px;
   padding: 8px 16px;
   border-bottom: 1px solid grey;
 }
 
-.fui-dialog-main {
+.cui-dialog-main {
   padding: 8px 16px;
   min-height: 6em;
 }
 
-.fui-dialog-footer {
+.cui-dialog-footer {
   padding: 8px 16px;
   border-top: 1px solid grey;
   display: flex;
   justify-content: flex-end;
 }
 
-.fui-dialog-close {
+.cui-dialog-close {
   position: absolute;
   bottom: 100%;
   left: 100%;

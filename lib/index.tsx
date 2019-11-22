@@ -1,3 +1,5 @@
+import 'index.scss'
+
 export { default as Icon } from './icon/icon'
 export { default as Button } from './button/button'
 export { Dialog, confirm, alert, modal } from './dialog/dialog'

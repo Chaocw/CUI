@@ -12,15 +12,15 @@ interface ClassToggles {
 
 const scopedClassMaker = (prefix: string) =>
   (name: string | ClassToggles, options?: Options) =>
-     Object
-      .entries(typeof name === 'object' ? name : {[name] : name})
+    Object
+      .entries(typeof name === 'object' ? name : { [name]: name })
       .filter(kv => kv[1] !== false)
       .map(kv => kv[0])
       .map(name => [prefix, name].filter(Boolean).join('-'))
       .concat(options && options.extra || [])
-      .join(' ')
+      .join(' ');
 
 
-export {scopedClassMaker};
+export { scopedClassMaker };
 
 export default classes;
