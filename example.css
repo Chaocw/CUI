@@ -23,8 +23,7 @@
   font-size: 16px;
   margin-right: 20px;
 }
-
-.gu-button {
+.cc-button {
   outline: 0;
   line-height: 1.499;
   position: relative;
@@ -53,8 +52,7 @@
   background-color: #fff;
   border-color: #d9d9d9;
 }
-
-.gu-button-primary {
+.cc-button-primary {
   color: #fff;
   background-color: #13c2c2;
   border-color: #13c2c2;
@@ -62,68 +60,57 @@
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
-
-.gu-button-dashed {
+.cc-button-dashed {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
   border-color: #d9d9d9;
   border-style: dashed;
 }
-
-.gu-button-danger {
+.cc-button-danger {
   color: #f5222d;
   background-color: #f5f5f5;
   border-color: #d9d9d9;
 }
-
-.gu-button:focus, .gu-button:hover {
+.cc-button:focus, .cc-button:hover {
   color: #36cfc9;
   background-color: #fff;
   border-color: #36cfc9;
 }
-
-.gu-button:hover, .gu-button:focus, .gu-button:active, .gu-button.active {
+.cc-button:hover, .cc-button:focus, .cc-button:active, .cc-button.active {
   text-decoration: none;
   background: #fff;
 }
-
-.gu-button:active, .gu-button.active {
+.cc-button:active, .cc-button.active {
   color: #08979c;
   background-color: #fff;
   border-color: #08979c;
 }
-
-.gu-button-primary:hover, .gu-button-primary:focus {
+.cc-button-primary:hover, .cc-button-primary:focus {
   color: #fff;
   background-color: #36cfc9;
   border-color: #36cfc9;
 }
-
-.gu-button-primary:active, .gu-button-primary.active {
+.cc-button-primary:active, .cc-button-primary.active {
   color: #fff;
   background-color: #08979c;
   border-color: #08979c;
 }
-
-.gu-button-danger:hover {
+.cc-button-danger:hover {
   color: #fff;
   background-color: #ff4d4f;
   border-color: #ff4d4f;
 }
-
-.gu-button-danger:focus {
+.cc-button-danger:focus {
   color: #ff4d4f;
   background-color: #fff;
   border-color: #ff4d4f;
 }
-
-.gu-button-danger:active, .gu-button-danger.active {
+.cc-button-danger:active, .cc-button-danger.active {
   color: #fff;
   background-color: #cf1322;
   border-color: #cf1322;
 }
-
-.gu-button-dashed:hover, .gu-button-dashed:focus {
+.cc-button-dashed:hover, .cc-button-dashed:focus {
   color: #36cfc9;
   background-color: #fff;
   border-color: #36cfc9;
@@ -382,17 +369,14 @@ body {
     opacity: 0;
   }
 }
-
-.gu-layout {
+.cc-layout {
   display: flex;
   flex-direction: column;
 }
-
-.gu-layout-content {
+.cc-layout-content {
   flex-grow: 1;
 }
-
-.gu-layout > .gu-layout {
+.cc-layout > .cc-layout {
   flex-grow: 1;
   flex-direction: row;
 }

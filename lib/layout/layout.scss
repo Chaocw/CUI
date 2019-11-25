@@ -1,5 +1,5 @@
 @import "../helper";
-.gu-layout {
+.cc-layout {
   display: flex;
   flex-direction: column;
   &-content {
@@ -11,7 +11,7 @@
   }
   &-hasAside {
     flex-direction: row;
-    &>.gu-layout {
+    & > .cc-layout {
       flex-direction: column;
     }
   }

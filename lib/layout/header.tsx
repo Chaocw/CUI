@@ -1,18 +1,18 @@
-import React from 'react'
-import {scopedClassMaker} from '../helpers/classes';
+import React from 'react';
+import { scopedClassMaker } from '../helpers/classes';
 
-const sc = scopedClassMaker('gu-layout');
+const sc = scopedClassMaker('cc-layout');
 
-interface Props extends React.HTMLAttributes<HTMLElement>{
+interface Props extends React.HTMLAttributes<HTMLElement> {
 
 }
 
 const Header: React.FunctionComponent<Props> = (props) => {
-  const {className, ...rest} = props
+  const { className, ...rest } = props;
   return (
-    <div className={sc('header', {extra: className})} {...rest}>
-      {props.children}
+    <div className={ sc('header', { extra: className }) } { ...rest }>
+      { props.children }
     </div>
-  )
-}
-export default Header
+  );
+};
+export default Header;

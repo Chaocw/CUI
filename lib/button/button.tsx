@@ -3,7 +3,7 @@ import { scopedClassMaker } from '../helpers/classes';
 import './button.scss';
 import Icon from '../icon/icon';
 
-const sc = scopedClassMaker('gu-button');
+const sc = scopedClassMaker('cc-button');
 
 interface Props extends React.ButtonHTMLAttributes<HTMLElement> {
   icon?: string,

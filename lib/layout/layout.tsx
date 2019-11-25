@@ -1,9 +1,9 @@
-import React, { ReactElement } from 'react'
-import { scopedClassMaker } from '../helpers/classes'
-import './layout.scss'
-import Sider from "./sider"
+import React, { ReactElement } from 'react';
+import { scopedClassMaker } from '../helpers/classes';
+import './layout.scss';
+import Sider from './sider';
 
-const sc = scopedClassMaker('gu-layout')
+const sc = scopedClassMaker('cc-layout');
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
 	children: ReactElement | Array<ReactElement>

@@ -1,3 +1,3 @@
-export const guLayout: string;
-export const guLayoutContent: string;
-export const guLayoutHasAside: string;
+export const ccLayout: string;
+export const ccLayoutContent: string;
+export const ccLayoutHasAside: string;
