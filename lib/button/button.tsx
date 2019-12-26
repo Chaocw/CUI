@@ -5,7 +5,7 @@ import Icon from '../icon/icon';
 
 const sc = scopedClassMaker('cc-button');
 
-interface Props extends React.ButtonHTMLAttributes<HTMLElement> {
+interface Props extends React.HTMLAttributes<HTMLElement> {
   icon?: string,
   htmlType?: string,
   type?: string,
