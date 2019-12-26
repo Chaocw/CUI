@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{91:function(o,c,n){try{(o=>o.keys().forEach(o))(n(92))}catch(o){console.log("error import all svg")}}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{92:function(o,c,n){try{(r=n(93)).keys().forEach(r)}catch(o){console.log("error import all svg")}var r}}]);
