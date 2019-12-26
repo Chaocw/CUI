@@ -24,7 +24,7 @@
   margin-right: 20px;
 }
 
-.gu-button {
+.cc-button {
   outline: 0;
   line-height: 1.499;
   position: relative;
@@ -54,7 +54,7 @@
   border-color: #d9d9d9;
 }
 
-.gu-button-primary {
+.cc-button-primary {
   color: #fff;
   background-color: #13c2c2;
   border-color: #13c2c2;
@@ -63,67 +63,67 @@
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
 
-.gu-button-dashed {
+.cc-button-dashed {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
   border-color: #d9d9d9;
   border-style: dashed;
 }
 
-.gu-button-danger {
+.cc-button-danger {
   color: #f5222d;
   background-color: #f5f5f5;
   border-color: #d9d9d9;
 }
 
-.gu-button:focus, .gu-button:hover {
+.cc-button:focus, .cc-button:hover {
   color: #36cfc9;
   background-color: #fff;
   border-color: #36cfc9;
 }
 
-.gu-button:hover, .gu-button:focus, .gu-button:active, .gu-button.active {
+.cc-button:hover, .cc-button:focus, .cc-button:active, .cc-button.active {
   text-decoration: none;
   background: #fff;
 }
 
-.gu-button:active, .gu-button.active {
+.cc-button:active, .cc-button.active {
   color: #08979c;
   background-color: #fff;
   border-color: #08979c;
 }
 
-.gu-button-primary:hover, .gu-button-primary:focus {
+.cc-button-primary:hover, .cc-button-primary:focus {
   color: #fff;
   background-color: #36cfc9;
   border-color: #36cfc9;
 }
 
-.gu-button-primary:active, .gu-button-primary.active {
+.cc-button-primary:active, .cc-button-primary.active {
   color: #fff;
   background-color: #08979c;
   border-color: #08979c;
 }
 
-.gu-button-danger:hover {
+.cc-button-danger:hover {
   color: #fff;
   background-color: #ff4d4f;
   border-color: #ff4d4f;
 }
 
-.gu-button-danger:focus {
+.cc-button-danger:focus {
   color: #ff4d4f;
   background-color: #fff;
   border-color: #ff4d4f;
 }
 
-.gu-button-danger:active, .gu-button-danger.active {
+.cc-button-danger:active, .cc-button-danger.active {
   color: #fff;
   background-color: #cf1322;
   border-color: #cf1322;
 }
 
-.gu-button-dashed:hover, .gu-button-dashed:focus {
+.cc-button-dashed:hover, .cc-button-dashed:focus {
   color: #36cfc9;
   background-color: #fff;
   border-color: #36cfc9;
@@ -264,9 +264,26 @@ body {
   font-size: 16px;
 }
 
+.cui-styles-example-code {
+  max-width: 800px;
+  overflow: auto;
+  margin-top: 16px;
+  animation: cui-styles-example-codeShow 1 0.2s;
+  transform-origin: left top;
+}
 
-.fui-dialog {
-  position: relative;
+@keyframes cui-styles-example-codeShow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+.cui-dialog {
+  position: fixed;
   background: white;
   min-width: 20em;
   z-index: 2;
@@ -274,9 +291,11 @@ body {
   width: 500px;
   margin: 0 auto;
   top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.fui-dialog-wrap {
+.cui-dialog-wrap {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -284,7 +303,7 @@ body {
   right: 0;
 }
 
-.fui-dialog-mask {
+.cui-dialog-mask {
   position: fixed;
   top: 0;
   left: 0;
@@ -294,25 +313,25 @@ body {
   z-index: 1;
 }
 
-.fui-dialog-header {
+.cui-dialog-header {
   font-size: 22px;
   padding: 8px 16px;
   border-bottom: 1px solid grey;
 }
 
-.fui-dialog-main {
+.cui-dialog-main {
   padding: 8px 16px;
   min-height: 6em;
 }
 
-.fui-dialog-footer {
+.cui-dialog-footer {
   padding: 8px 16px;
   border-top: 1px solid grey;
   display: flex;
   justify-content: flex-end;
 }
 
-.fui-dialog-close {
+.cui-dialog-close {
   position: absolute;
   bottom: 100%;
   left: 100%;
@@ -327,45 +346,103 @@ body {
   color: white;
 }
 
-.fade-enter {
+.zoom-enter,
+.zoom-appear {
   opacity: 0;
-  animation-duration: .5s;
+  animation-duration: 0.3s;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
   animation-play-state: paused;
 }
 
-.fade-appear {
-  opacity: 0;
-  animation-duration: .5s;
+.zoom-leave {
+  animation-duration: 0.3s;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  animation-play-state: paused;
+}
+
+.zoom-enter.zoom-enter-active,
+.zoom-appear.zoom-appear-active {
+  animation-name: rcDialogZoomIn;
+  animation-play-state: running;
+  transform-origin: center;
+}
+
+.zoom-leave.zoom-leave-active {
+  animation-name: rcDialogZoomOut;
+  animation-play-state: running;
+}
+
+@keyframes rcDialogZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes rcDialogZoomOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+}
+
+.fade-enter,
+.fade-appear {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 
 .fade-leave {
-  animation-duration: .5s;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 
-.fade-enter.fade-enter-active {
-  animation-name: fadeIn;
-  animation-play-state: running;
-}
-
+.fade-enter.fade-enter-active,
 .fade-appear.fade-appear-active {
-  animation-name: fadeIn;
+  -webkit-animation-name: antFadeIn;
+  animation-name: antFadeIn;
+  -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 
 .fade-leave.fade-leave-active {
-  animation-name: fadeOut;
+  -webkit-animation-name: antFadeOut;
+  animation-name: antFadeOut;
+  -webkit-animation-play-state: running;
   animation-play-state: running;
+  pointer-events: none;
 }
 
-@keyframes fadeIn {
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.fade-leave {
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes antFadeIn {
   0% {
     opacity: 0;
   }
@@ -374,7 +451,16 @@ body {
   }
 }
 
-@keyframes fadeOut {
+@keyframes antFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes antFadeOut {
   0% {
     opacity: 1;
   }
@@ -383,25 +469,46 @@ body {
   }
 }
 
-.gu-layout {
+@keyframes antFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cui-demo-input\.example-input-example-demo {
+  margin-bottom: 20px;
+}
+
+.cui-demo-input\.example-input-example-demo .cui-demo-input\.example-input-example-h1 {
+  margin-bottom: 20px;
+}
+
+.cui-demo-input\.example-input-example-demo .cui-demo-input\.example-f-input {
+  margin-left: 20px;
+}
+
+.cc-layout {
   display: flex;
   flex-direction: column;
 }
 
-.gu-layout-content {
+.cc-layout-content {
   flex-grow: 1;
 }
 
-.gu-layout > .gu-layout {
+.cc-layout > .cc-layout {
   flex-grow: 1;
   flex-direction: row;
 }
 
-.gu-layout-hasAside {
+.cc-layout-hasAside {
   flex-direction: row;
 }
 
-.gu-layout-hasAside > .gu-layout {
+.cc-layout-hasAside > .cc-layout {
   flex-direction: column;
 }
 
@@ -541,5 +648,102 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.cui-demo-form\.example-f-form-demo {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+@keyframes cu-form-slideDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 24px;
+  }
+}
+
+.cu-form-table {
+  border-collapse: collapse;
+}
+
+.cu-form-td {
+  padding: 8px 8px 8px 0;
+}
+
+.cu-form-td:last-child {
+  padding-right: 0;
+}
+
+.cu-form-tr:first-child .cu-form-td {
+  padding-top: 0;
+}
+
+.cu-form-tr:last-child .cu-form-td {
+  padding-bottom: 0;
+}
+
+.cu-form-vertical .cu-form-row {
+  margin: 8px 0;
+}
+
+.cu-form-vertical .cu-form-row:first-child {
+  margin-top: 0;
+}
+
+.cu-form-vertical .cu-form-row:last-child {
+  margin-bottom: 0;
+}
+
+.cu-form-vertical .cu-form-label {
+  margin-bottom: 8px;
+}
+
+.cu-form-vertical .cu-form-input-wrapper {
+  margin-bottom: 4px;
+}
+
+.cu-form-error {
+  font-size: 12px;
+  color: red;
+}
+
+.cu-form-vertical .cu-form-error {
+  height: 24px;
+  animation: cu-form-slideDown 200ms;
+}
+
+.cu-form-horizontal .cu-form-error {
+  line-height: 32px;
+}
+
+.cu-form-vertical .cu-form-buttons {
+  margin-top: 24px;
+}
+
+.cui-input {
+  width: 240px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.cui-input-small {
+  height: 24px;
+}
+
+.cui-input-large {
+  height: 40px;
+}
+
+.cui-input:focus {
+  border: 1px solid #1890ff;
 }
 
