@@ -112,3 +112,20 @@ body {
     }
   }
 }
+
+.code {
+  max-width: 800px;
+  overflow: auto;
+  margin-top: 16px;
+  animation: codeShow 1 0.2s;
+  transform-origin: left top;
+}
+
+@keyframes codeShow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
