@@ -1,8 +1,9 @@
+// https://jestjs.io/docs/en/configuration.html
 const base = require('./jest.config')
 module.exports = Object.assign({}, base, {
-  reporters: ["jest-junit"],
+  reporters: ['jest-junit'],
   collectCoverage: true,
-  collectCoverageFrom: ["lib/**/*.{ts,tsx}", "!**/node_modules/**", "!**/demo/**"],
+  collectCoverageFrom: ["{lib,include}/**/*.{js,jsx,ts,tsx}", "!**/node_modules/**"],
   coverageDirectory: 'coverage',
-  coverageReporters: ["json", "lcov", "text", "clover"],
+  coverageReporters: ['text', 'lcov'],
 })
