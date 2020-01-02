@@ -15,10 +15,10 @@ a react ui framework
 # 安装
 
 ```shell
-npm install cc-ui
+npm install cc-ui2020
 ```
 ```shell
-yarn add cc-ui
+yarn add cc-ui2020
 ```
 
 # PR [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/Chaocw/CUI/issues)
