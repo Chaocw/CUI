@@ -8,7 +8,7 @@
     "/dist/**/*"
   ],
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
+    "test": "cross-env NODE_ENV=test jest --clearCache && jest --config=jest.config.js --runInBand",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --config webpack.config.dev.js",
     "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
