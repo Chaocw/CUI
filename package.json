@@ -1,5 +1,5 @@
 {
-  "name": "cc-ui",
+  "name": "cc-ui2020",
   "version": "0.0.3",
   "description": "",
   "main": "dist/lib/index",
@@ -69,6 +69,7 @@
   "dependencies": {
     "@types/react-router": "^4.4.5",
     "@types/react-router-dom": "^4.3.2",
+    "cc-ui2020": "^0.0.3",
     "fui9897": "^0.0.3",
     "rc-animate": "^3.0.0-rc.6",
     "react": "^16.8.4",

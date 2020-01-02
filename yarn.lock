@@ -2216,6 +2216,21 @@ caseless@~0.12.0:
   resolved "https://registry.npm.taobao.org/caseless/download/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=
 
+cc-ui2020@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/cc-ui2020/-/cc-ui2020-0.0.3.tgz#4229c9530396314914ef56ba851d1c7e4acafae2"
+  integrity sha512-0FR7MRUCrhmHflG9QnoBxSCqalMhfYYvTRno/ZPYDcSEMcUsB3T2VLRBUi83I9LuTu6byeIfK6UKkwvqRZv74A==
+  dependencies:
+    "@types/react-router" "^4.4.5"
+    "@types/react-router-dom" "^4.3.2"
+    fui9897 "^0.0.3"
+    rc-animate "^3.0.0-rc.6"
+    react "^16.8.4"
+    react-dom "^16.8.4"
+    react-router "^5.0.0"
+    react-router-dom "^5.0.0"
+    yarn "^1.21.1"
+
 chalk@2.4.2, chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.npm.taobao.org/chalk/download/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"

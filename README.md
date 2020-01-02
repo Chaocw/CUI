@@ -4,7 +4,7 @@ a react ui framework
 开发中...
 
 [![CircleCI](https://circleci.com/gh/Chaocw/CUI.svg?style=svg)](https://circleci.com/gh/Chaocw/CUI)
-[![npm version](https://badge.fury.io/js/fui9897.svg)](https://badge.fury.io/js/fui9897)
+[![npm version](https://badge.fury.io/js/cc-ui2020.svg)](https://badge.fury.io/js/fui9897)
 
 > 该 ui 库基于 react16.8.0 开发
  
