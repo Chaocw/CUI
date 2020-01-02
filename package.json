@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FrankFang/frank-test-2.git"
+    "url": "git+https://github.com/Chaocw/CUI.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/FrankFang/frank-test-2/issues"
+    "url": "https://github.com/Chaocw/CUI/issues"
   },
-  "homepage": "https://github.com/FrankFang/frank-test-2#readme",
+  "homepage": "https://github.com/Chaocw/CUI#readme",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
