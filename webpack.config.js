@@ -1,7 +1,7 @@
 const path = require('path')
 const slash = require('slash2')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const _mode = process.env.NODE_ENV
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+// const _mode = process.env.NODE_ENV
 
 module.exports = {
   entry: {
@@ -33,7 +33,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           {
-            loader: _mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader
+            loader: 'style-loader'
           },
           {
             loader: 'typings-for-css-modules-loader',
