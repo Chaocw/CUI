@@ -3,8 +3,10 @@
 module.exports = {
   verbose: true,
   clearMocks: false,
-  collectCoverage: false,
   reporters: ["default"],
+
+  collectCoverage: false,
+
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],
   globals: {
