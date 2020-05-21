@@ -12,7 +12,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot --progress --config webpack.config.dev.js",
     "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.ci.js"
+    "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT_NAME=results.xml JEST_JUNIT_OUTPUT_DIR=./test-results/jest jest --config=jest.config.ci.js"
   },
   "repository": {
     "type": "git",
@@ -70,7 +70,6 @@
     "@types/react-router": "^4.4.5",
     "@types/react-router-dom": "^4.3.2",
     "cc-ui2020": "^0.0.3",
-    "fui9897": "^0.0.3",
     "rc-animate": "^3.0.0-rc.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
