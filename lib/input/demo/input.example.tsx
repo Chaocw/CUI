@@ -3,10 +3,10 @@ import Input from '../input';
 import styles from './input.example.scss';
 
 const InputExample: React.FunctionComponent = () => {
-  const [inputVal1, setInputVal1] = useState();
-  const [inputVal2, setInputVal2] = useState();
-  const [inputVal3, setInputVal3] = useState();
-  const [inputVal4, setInputVal4] = useState();
+  const [inputVal1, setInputVal1] = useState<string>();
+  const [inputVal2, setInputVal2] = useState<string>();
+  const [inputVal3, setInputVal3] = useState<string>();
+  const [inputVal4, setInputVal4] = useState<string>();
   return (
     <>
       <div className={ styles.inputExampleDemo }>
